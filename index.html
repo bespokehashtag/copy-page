@@ -5,65 +5,69 @@
   <title>해시태그 복사</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
       background-color: #f5f7fa;
       font-family: 'Noto Sans KR', sans-serif;
+      height: 100dvh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100dvh;
-      margin: 0;
-      padding: 24px;
+    }
+
+    .container {
       text-align: center;
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
     }
 
     h2 {
+      font-size: 7vw;
       color: #1e2b4f;
-      font-size: 6vw;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
 
     p {
+      font-size: 5vw;
       color: #444;
-      font-size: 4.5vw;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
       line-height: 1.6;
     }
 
     .copy-button {
-      font-size: 5vw;
-      padding: 18px 40px;
+      font-size: 6vw;
+      padding: 22px 48px;
       background-color: #1428A0;
-      color: white;
+      color: #fff;
       border: none;
-      border-radius: 14px;
+      border-radius: 16px;
       cursor: pointer;
-      box-shadow: 0 8px 16px rgba(20, 40, 160, 0.25);
-      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 8px 18px rgba(20, 40, 160, 0.3);
+      transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
     .copy-button:hover {
       background-color: #0f1e70;
-      transform: scale(1.03);
+      transform: scale(1.04);
     }
 
     .copied-message {
       margin-top: 30px;
       color: #2d7d46;
+      font-size: 5vw;
       display: none;
-      font-size: 4.5vw;
     }
   </style>
 </head>
 <body>
-
-  <h2>해시태그 복사</h2>
-  <p>버튼을 누르면 전체 해시태그가<br>자동으로 복사됩니다</p>
-
-  <button class="copy-button" onclick="copyText()">해시태그 복사하기</button>
-
-  <div id="copied" class="copied-message">✔ 복사되었습니다!</div>
+  <div class="container">
+    <h2>해시태그 복사</h2>
+    <p>버튼을 누르면<br>전체 해시태그가 복사됩니다</p>
+    <button class="copy-button" onclick="copyText()">해시태그 복사하기</button>
+    <div id="copied" class="copied-message">✔ 복사되었습니다!</div>
+  </div>
 
   <script>
     function copyText() {
@@ -80,6 +84,5 @@
       });
     }
   </script>
-
 </body>
 </html>
