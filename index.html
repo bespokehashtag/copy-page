@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>해시태그 복사</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-color: #f5f7fa;
@@ -11,30 +12,32 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      height: 100dvh;
       margin: 0;
-      padding: 20px;
+      padding: 24px;
+      text-align: center;
     }
 
     h2 {
       color: #1e2b4f;
-      font-size: 40px;
-      margin-bottom: 20px;
+      font-size: 6vw;
+      margin-bottom: 16px;
     }
 
     p {
       color: #444;
-      font-size: 24px;
+      font-size: 4.5vw;
       margin-bottom: 40px;
+      line-height: 1.6;
     }
 
     .copy-button {
-      font-size: 28px;
-      padding: 25px 60px;
+      font-size: 5vw;
+      padding: 18px 40px;
       background-color: #1428A0;
       color: white;
       border: none;
-      border-radius: 18px;
+      border-radius: 14px;
       cursor: pointer;
       box-shadow: 0 8px 16px rgba(20, 40, 160, 0.25);
       transition: background-color 0.3s ease, transform 0.2s ease;
@@ -49,14 +52,14 @@
       margin-top: 30px;
       color: #2d7d46;
       display: none;
-      font-size: 22px;
+      font-size: 4.5vw;
     }
   </style>
 </head>
 <body>
 
   <h2>해시태그 복사</h2>
-  <p>아래 버튼을 클릭하면 전체 해시태그가 자동으로 복사됩니다</p>
+  <p>버튼을 누르면 전체 해시태그가<br>자동으로 복사됩니다</p>
 
   <button class="copy-button" onclick="copyText()">해시태그 복사하기</button>
 
