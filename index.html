@@ -24,27 +24,28 @@
     }
 
     h2 {
-      font-size: 7vw;
+      font-size: 24px;
       color: #1e2b4f;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     p {
-      font-size: 5vw;
+      font-size: 18px;
       color: #444;
-      margin-bottom: 48px;
+      margin-bottom: 40px;
       line-height: 1.6;
     }
 
     .copy-button {
-      font-size: 6vw;
-      padding: 20px 40px;
+      font-size: 20px;
+      padding: 18px 36px;
       background-color: #1428A0;
       color: #fff;
       border: none;
-      border-radius: 14px;
+      border-radius: 12px;
       cursor: pointer;
-      box-shadow: 0 8px 18px rgba(20, 40, 160, 0.3);
+      white-space: nowrap;
+      box-shadow: 0 6px 14px rgba(20, 40, 160, 0.25);
       transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
@@ -54,29 +55,26 @@
     }
 
     .copied-message {
-      margin-top: 30px;
+      margin-top: 20px;
       color: #2d7d46;
-      font-size: 5vw;
+      font-size: 16px;
       display: none;
     }
 
-    /* ✅ PC 화면용 스타일 덮어쓰기 */
-    @media (min-width: 768px) {
+    /* ✅ 모바일: 화면이 작을 경우에만 크기 키움 */
+    @media (max-width: 480px) {
       h2 {
-        font-size: 36px;
+        font-size: 7vw;
       }
-
       p {
-        font-size: 20px;
+        font-size: 5vw;
       }
-
       .copy-button {
-        font-size: 22px;
-        padding: 18px 36px;
+        font-size: 5.5vw;
+        padding: 18px 32px;
       }
-
       .copied-message {
-        font-size: 18px;
+        font-size: 4.5vw;
       }
     }
   </style>
@@ -84,7 +82,7 @@
 <body>
   <div class="container">
     <h2>해시태그 복사</h2>
-    <p>버튼을 누르면<br>전체 해시태그가 복사됩니다</p>
+    <p>버튼을 누르면 전체 해시태그가<br>복사됩니다</p>
     <button class="copy-button" onclick="copyText()">해시태그 복사하기</button>
     <div id="copied" class="copied-message">✔ 복사되었습니다!</div>
   </div>
