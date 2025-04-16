@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>해시태그 복사</title>
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Noto Sans KR', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      color: #1e2b4f;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .copy-button {
+      border: none;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .copy-button img {
+      width: 250px;
+      height: auto;
+      transition: transform 0.2s ease;
+    }
+
+    .copy-button:hover img {
+      transform: scale(1.05);
+    }
+
+    .copied-message {
+      margin-top: 20px;
+      color: #2d7d46;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>해시태그 복사</h2>
+  <p>아래 이미지를 누르면 해시태그가 자동으로 복사됩니다.</p>
+
+  <!-- 이미지 버튼 -->
+  <button class="copy-button" onclick="copyText()">
+    <img src="https://via.placeholder.com/250x60.png?text=%23+해시태그+복사하기" alt="해시태그 복사하기">
+  </button>
+
+  <div id="copied" class="copied-message">복사되었습니다!</div>
+
+  <script>
+    function copyText() {
+      const hashtags = `#비스포크AI하이브리드 #비스포크AI패밀리허브 #비스포크AI냉장고 #비스포크AI하이브리드키친핏Max #비스포크AI김치플러스 #비스포크AI정수기 #비스포크AI식기세척기 #비스포크AI인덕션 #비스포크AI후드Air #비스포크AI콤보 #비스포크AI원바디 #비스포크AI건조기 #비스포크AI에어드레서 #비스포크AI무풍콤보갤러리 #비스포크AI무풍갤러리 #비스포크AI무풍클래식 #BespokeAI가전 #삼성신혼가전 #스마트싱스 #삼성전자 #삼성전자이벤트 #이벤트식별코드by커뮤니티`;
+
+      navigator.clipboard.writeText(hashtags).then(() => {
+        const message = document.getElementById('copied');
+        message.style.display = 'block';
+        setTimeout(() => {
+          message.style.display = 'none';
+        }, 2000);
+      }).catch(() => {
+        alert("복사에 실패했습니다. 수동으로 복사해 주세요.");
+      });
+    }
+  </script>
+
+</body>
+</html>
